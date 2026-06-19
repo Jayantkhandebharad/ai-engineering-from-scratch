@@ -63,3 +63,8 @@ catalog.json
 site/sitemap.xml
 site/llms.txt
 site/build-meta.js
+
+# Model checkpoints and weights — never commit
+*.pt
+*.pth
+*.safetensors
