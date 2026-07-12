@@ -49,21 +49,6 @@ def inline_plotting():
     print("In a notebook, plt.show() displays this inline.")
 
 
-def dataframe_display():
-    print("\n=== DataFrame Display ===\n")
-
-    df = pd.DataFrame({
-        "model": ["Linear Regression", "Random Forest", "Neural Network", "XGBoost"],
-        "accuracy": [0.72, 0.89, 0.94, 0.91],
-        "train_time_sec": [0.1, 2.3, 45.6, 8.2],
-        "parameters": [102, 50_000, 1_200_000, 25_000],
-    })
-
-    print("In a notebook, just typing 'df' renders a rich HTML table:\n")
-    print(df.to_string(index=False))
-
-    print(f"\nBest model: {df.loc[df['accuracy'].idxmax(), 'model']}")
-    print(f"Fastest model: {df.loc[df['train_time_sec'].idxmin(), 'model']}")
 
 
 def memory_check():
